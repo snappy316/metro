@@ -1,0 +1,16 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  driver: 
+  coach: 
+  route: MyString
+  start_time: 2015-03-20 14:44:43
+  end_time: 2015-03-20 14:44:43
+
+two:
+  driver: 
+  coach: 
+  route: MyString
+  start_time: 2015-03-20 14:44:43
+  end_time: 2015-03-20 14:44:43
