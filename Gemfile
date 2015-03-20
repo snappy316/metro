@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'byebug'
-  gem 'mintest-rails-capybara'
+  gem 'minitest-rails-capybara'
   gem 'spring'
   gem 'web-console', '~> 2.0'
 end
