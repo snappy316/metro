@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+bus_one:
+  klass: Bus
+  model: BlueBird
+  year: 2009
+
+train_two:
+  klass: Train
+  model: Swedish
+  year: 2008

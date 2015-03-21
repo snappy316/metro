@@ -1,28 +1,19 @@
-== README
+# Metro - Scheduling Simulator
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app simulates scheduling assignments in a Metro Transit system.It allows users to create/edit drivers and coaches, and then create assignments for the drivers and coaches.
 
-Things you may want to cover:
+## Approach
 
-* Ruby version
+Each resource was scaffolded, and then a "has many through" relationship was implemented: drivers have many coaches through assignments, and vice versa.
 
-* System dependencies
+Drivers have a name, email, and their assignment preference (time of day, and coach). Drivers can view their upcoming assignments on their individual driver pages, as well as through the Assignments Index page.
 
-* Configuration
+Coaches have a classification (through the klass column), model, and year of manufacture.
 
-* Database creation
+Assignments keep track of their driver id and coach id, as well as what route they will be on, and the start and end times.
 
-* Database initialization
+## Issues / Further Improvements
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- All the views were scaffolded, and don't look very pretty.
+- There is no authentication or authorization implemented. As such, there are no policies implemented to prevent drivers from creating/editing their own assignments, and only allowing supervisors to create/edit assignments.
+- Coach IDs are generated automatically, and all coach classifications (bus, train, streetcar, etc.) are all lumped together in the Coach class. In order to more closely simulate Metro's actual numbering scheme, it might be nice to assign each classification a different range of IDs, so that it is easier to tell which classification a specific coach is based on it's ID.

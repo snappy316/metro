@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @driver.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @driver.email %>
+</p>
+
+<p>
+  <strong>Preference:</strong>
+  <%= @driver.preference %>
+</p>
+
+<p>
+  <strong>Upcoming Assignments:</strong><br>
+  <% @assignments.each do |assignment| %>
+    <%= assignment.coach.id %> |
+    <%= assignment.route %> |
+    <%= assignment.start_time %> |
+    <%= assignment.end_time %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_driver_path(@driver) %> |
+<%= link_to 'Back', drivers_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Driver:</strong>
+  <%= @assignment.driver.name %>
+</p>
+
+<p>
+  <strong>Coach:</strong>
+  <%= @assignment.coach.id %>
+</p>
+
+<p>
+  <strong>Route:</strong>
+  <%= @assignment.route %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @assignment.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @assignment.end_time %>
+</p>
+
+<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
+<%= link_to 'Back', assignments_path %>

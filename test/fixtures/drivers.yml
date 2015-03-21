@@ -1,0 +1,12 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+david:
+  name: David
+  email: david@test.com
+  preference: evening trains
+
+stephen:
+  name: Stephen
+  email: stephen@test.com
+  preference: morning busses

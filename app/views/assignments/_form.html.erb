@@ -1,0 +1,41 @@
+<%= form_for(@assignment) do |f| %>
+  <% if @assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@assignment.errors.count, "error") %> prohibited this assignment from being saved:</h2>
+
+      <ul>
+      <% @assignment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :driver_id %><br>
+    <%= f.select :driver_id do %>
+      <% Driver.all.each do |d| %>
+        <%= content_tag(:option, d.name, value: d.id) %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :coach_id %><br>
+    <%= f.select :coach_id, Coach.all.map(&:id) %>
+  </div>
+  <div class="field">
+    <%= f.label :route %><br>
+    <%= f.text_field :route %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br>
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
