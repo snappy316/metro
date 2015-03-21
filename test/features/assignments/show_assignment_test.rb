@@ -10,7 +10,7 @@ feature "Show Assignment" do
 
     # Then I can see details of the assignment
     page.text.must_include("David")
-    page.text.must_include("train two")
+    page.text.must_include(assignments(:one).coach.id.to_s)
     page.text.must_include("Central Link")
   end
 end

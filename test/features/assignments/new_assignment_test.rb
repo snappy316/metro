@@ -7,8 +7,8 @@ feature "New Assignment" do
 
     # When I click on "New Assignment" and fill out the form
     click_on("New Assignment")
-    select("David", from: "Drivers")
-    select(coaches(:bus_one).id.to_s, from: "Coaches")
+    select("David", from: "Driver")
+    select(coaches(:bus_one).id.to_s, from: "Coach")
     fill_in("Route", with: 216)
     click_on("Create Assignment")
 

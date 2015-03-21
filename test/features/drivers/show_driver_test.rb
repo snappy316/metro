@@ -10,5 +10,7 @@ feature "Show a Driver Profile" do
 
     # Then I should see their show page
     page.text.must_include("Name: David")
+    page.text.must_include("Upcoming Assignments")
+    page.text.must_include("Central Link")
   end
 end

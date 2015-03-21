@@ -10,6 +10,7 @@ class DriversController < ApplicationController
   # GET /drivers/1
   # GET /drivers/1.json
   def show
+    @assignments = @driver.assignments.all
   end
 
   # GET /drivers/new

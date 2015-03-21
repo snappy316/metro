@@ -13,11 +13,15 @@
 
   <div class="field">
     <%= f.label :driver_id %><br>
-    <%= f.text_field :driver_id %>
+    <%= f.select :driver_id do %>
+      <% Driver.all.each do |d| %>
+        <%= content_tag(:option, d.name, value: d.id) %>
+      <% end %>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :coach_id %><br>
-    <%= f.text_field :coach_id %>
+    <%= f.select :coach_id, Coach.all.map(&:id) %>
   </div>
   <div class="field">
     <%= f.label :route %><br>

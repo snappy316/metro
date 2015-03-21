@@ -16,9 +16,9 @@
 
   <tbody>
     <% @assignments.each do |assignment| %>
-      <tr>
-        <td><%= assignment.driver %></td>
-        <td><%= assignment.coach %></td>
+      <tr id="<%= assignment.id %>">
+        <td><%= assignment.driver.name %></td>
+        <td><%= assignment.coach.id %></td>
         <td><%= assignment.route %></td>
         <td><%= assignment.start_time %></td>
         <td><%= assignment.end_time %></td>
