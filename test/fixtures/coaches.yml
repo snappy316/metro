@@ -1,12 +1,12 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  type: 
-  model: MyString
-  year: MyString
+bus_one:
+  klass: Bus
+  model: BlueBird
+  year: 2009
 
-two:
-  type: 
-  model: MyString
-  year: MyString
+train_two:
+  klass: Train
+  model: Swedish
+  year: 2008

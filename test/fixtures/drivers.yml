@@ -1,12 +1,12 @@
 # Read about fixtures at
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  name: MyString
-  email: MyString
-  preference: MyString
+david:
+  name: David
+  email: david@test.com
+  preference: evening trains
 
-two:
-  name: MyString
-  email: MyString
-  preference: MyString
+stephen:
+  name: Stephen
+  email: stephen@test.com
+  preference: morning busses
